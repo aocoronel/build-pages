@@ -1,0 +1,7 @@
+*.DS_Store
+
+.vscode/
+
+website/*
+_website/*
+
