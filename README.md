@@ -1,6 +1,6 @@
 # Build Pages
 
-I made the build process really simple by using [just](https://github.com/casey/just) (Just a command runner), which can build my whole blog with a simple command: `just all`. You can find my blog at [aocoronel.github.io](https://aocoronel.github.io).
+I made the build process really simple by using [just](https://github.com/casey/just) (Just a command runner), which can build my whole blog with a simple command: `just all`. You can find my blog at [aocoronel.gitlab.io](https://aocoronel.gitlab.io).
 
 Essentially it's going to run two distinct Shell scripts: `makeindex` and `build-pages`.
 
