@@ -8,7 +8,7 @@ main() {
   # shellcheck disable=2128
   case "$MASTER" in
   0)
-    [ -z "$subdirs" ] && mapfile -t subdirs < <(find "$SOURCE_DIR" -maxdepth 1 -type d)
+    [ -z "$subdirs" ] && mapfile -t subdirs < <(find -L "$SOURCE_DIR" -maxdepth 1 -type d)
 
     for SUB_DIR in "${subdirs[@]}"; do
       case "$SUB_DIR" in
@@ -23,7 +23,7 @@ main() {
         ;;
       esac
 
-      source_files=$(find "$SUB_DIR" -maxdepth 1 -type f -name "????-??-??-*" | sort -r)
+      source_files=$(find -L "$SUB_DIR" -maxdepth 1 -type f -name "????-??-??-*" | sort -r)
 
       [ -f "$SUB_DIR-index.md" ] && rm "$SUB_DIR-index.md"
 
@@ -41,7 +41,7 @@ main() {
     ;;
   1)
     # Generate master Index
-    source_files=$(find "$SOURCE_DIR" -type f -name "????-??-??-*.md" | sort -t/ -k3r)
+    source_files=$(find -L "$SOURCE_DIR" -type f -name "????-??-??-*.md" | sort -t/ -k3r)
 
     for file in $source_files; do
       makeIndex "$file"

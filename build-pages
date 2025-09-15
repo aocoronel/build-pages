@@ -26,7 +26,7 @@ main() {
   wait
 
   [ -n "$lazy_load" ] && {
-    find "$WEBSITE_DIR" -type f -iname "index.md" | while IFS= read -r index_file; do
+    find -L "$WEBSITE_DIR" -type f -iname "index.md" | while IFS= read -r index_file; do
       sed -i 's/<img src/<img loading="lazy" src/g' "$index_file"
     done
   }
@@ -113,7 +113,7 @@ findNext() {
   input_date=$(echo "$1" | cut -d'-' -f1-3)
   sub_dir=$(basename "$(dirname "$input_date")")
 
-  files=$(find "$SOURCE_DIR/$sub_dir" -maxdepth 1 -type f -name "????-??-??-*" | sort)
+  files=$(find -L "$SOURCE_DIR/$sub_dir" -maxdepth 1 -type f -name "????-??-??-*" | sort)
 
   index=$(echo "$files" | grep -n "$input_date" | cut -d: -f1)
 
@@ -151,13 +151,12 @@ getTitle() {
 
 addCss() {
   # Minify CSS files
-  cssfiles=("style" "projects" "index" "variables" "further-read" "default" "code" "sidebar" "toc" "posts" "about")
+  cssfiles=("style" "projects" "index" "variables" "further-read" "default" "code" "sidebar" "toc" "posts" "about" "dark-theme" "light-theme")
   for cssfile in "${cssfiles[@]}"; do
     sed -E "s/\/.*//" $STYLE_DIR/"$cssfile".css | sed '/^$/d' | tr -d '\n' >$WEBSITE_DIR/"$cssfile".css
   done
 
   cp $STYLE_DIR/script.js $WEBSITE_DIR/
-  cp $PAGES_DIR/feed.xml $WEBSITE_DIR/
   cp $PAGES_DIR/robots.txt $WEBSITE_DIR/
   cp $PAGES_DIR/.htaccess $WEBSITE_DIR/
   cp $PAGES_DIR/projects.html $WEBSITE_DIR/
@@ -165,7 +164,7 @@ addCss() {
 }
 
 if [ $# -eq 0 ]; then
-  MD_FILES=$(find $SOURCE_DIR -name "*.md" | sort)
+  MD_FILES=$(find -L $SOURCE_DIR -name "*.md" | sort)
 else
   MD_FILES="$@"
 fi
