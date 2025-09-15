@@ -5,3 +5,5 @@
 @import url("toc.css");
 @import url("variables.css");
 @import url("style.css");
+@import url("light-theme.css") screen and (prefers-color-scheme: light);
+@import url("dark-theme.css") screen and (prefers-color-scheme: dark);

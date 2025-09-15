@@ -45,6 +45,10 @@
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
     $for(css)$
     <link rel="stylesheet" href="$css$" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+    />
     $endfor$ $if(math)$ $math$ $endif$ $for(header-includes)$ $header-includes$
     $endfor$
   </head>
@@ -98,14 +102,6 @@
                 src="$rel_path$media/$imagepath$.avif"
             /></a>
           </span>
-          $endif$ $if(toc)$
-          <span>
-            <div class="table_of_contents">
-              <div class="table_of_contents_header">Contents:</div>
-              $table-of-contents$
-            </div>
-          </span>
-          <br />
           $endif$
         </div>
       </div>
@@ -119,10 +115,7 @@
       $endif$ $body$
       <p class="license">
         This post is licensed under
-        <a
-          class="license"
-          style="text-decoration: none; color: #d0d0d0"
-          href="https://creativecommons.org/licenses/by/4.0/"
+        <a class="license" href="https://creativecommons.org/licenses/by/4.0/"
           >CC BY 4.0</a
         >
         by the author.
@@ -174,7 +167,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="22"
             height="22"
-            fill="currentColor"
+            fill="#7c5cff"
             viewBox="0 0 256 256"
           >
             <path
@@ -213,13 +206,8 @@
         <span style="padding-right: 15px; text-wrap: auto">
           <p>
             © 2025
-            <a style="color: #d0d0d0" href="https://github.com/aocoronel/"
-              >Augusto Coronel.</a
-            >
-            <a
-              style="color: #979797"
-              href="https://github.com/aocoronel/"
-              href="https://creativecommons.org/licenses/by/4.0/"
+            <a href="https://github.com/aocoronel/">Augusto Coronel.</a>
+            <a href="https://creativecommons.org/licenses/by/4.0/"
               >All rights reserved.</a
             >
           </p>
@@ -229,4 +217,8 @@
     $for(include-after)$ $include-after$ $endfor$
   </body>
   <script src="$rel_path$script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
 </html>

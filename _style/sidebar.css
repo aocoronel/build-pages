@@ -17,9 +17,9 @@
 }
 .toggle-btn {
   background-color: var(--sidebar-background);
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   border-radius: 40%;
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   display: flex;
   font-size: 25px;
