@@ -47,6 +47,9 @@
 h2 {
   margin-top: 0px;
 }
+#body-content strong {
+  color: var(--text-color);
+}
 hr {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -63,12 +66,6 @@ p {
   clear: left;
   line-height: 165%;
   font-size: 90%;
-}
-p:before {
-  content: "";
-  display: block;
-  overflow: hidden;
-  width: 10em;
 }
 p.title {
   font-size: 90%;

@@ -94,8 +94,9 @@ h1 a,
 h2 a,
 h3 a,
 h4 a,
-h5 a {
-  color: var(--link);
+h5 a,
+h6 a {
+  color: var(--accent);
   text-decoration: none;
 }
 h1,
@@ -104,7 +105,7 @@ h3,
 h4,
 h5,
 h6 {
-  border-bottom: 1px dotted var(--text-color);
+  border-bottom: 0.5px dotted var(--text-color);
   clear: both;
   float: none;
   font-weight: bolder;
@@ -219,7 +220,7 @@ figcaption {
   text-align: center;
 }
 strong {
-  color: var(--text-color);
+  color: var(--accent);
 }
 math {
   color: var(--text-color);
