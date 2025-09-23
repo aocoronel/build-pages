@@ -29,6 +29,7 @@ li > code {
   border-width: 1px;
   color: var(--grey);
   padding: 3px;
+  overflow-x: auto;
 }
 span.clear {
   clear: left;
