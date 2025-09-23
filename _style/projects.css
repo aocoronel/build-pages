@@ -5,7 +5,7 @@
 }
 .project-card {
   align-items: center;
-  background: var(--code-background);
+  background: var(--proj-background);
   border-radius: 8px;
   display: flex;
   gap: 1rem;

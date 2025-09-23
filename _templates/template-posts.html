@@ -45,10 +45,6 @@
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
     $for(css)$
     <link rel="stylesheet" href="$css$" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
-    />
     $endfor$ $if(math)$ $math$ $endif$ $for(header-includes)$ $header-includes$
     $endfor$
   </head>
@@ -217,8 +213,4 @@
     $for(include-after)$ $include-after$ $endfor$
   </body>
   <script src="$rel_path$script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 </html>

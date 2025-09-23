@@ -2,5 +2,5 @@
   --accent: #7c5cff;
   --border-accent: #7c5cff;
   --box-shadow: rgba(0, 0, 0, 0.3);
-  --monospace-font: "Source Sans Pro", "Microsoft Yahei", sans-serif;
+  --monospace-font: sans;
 }
