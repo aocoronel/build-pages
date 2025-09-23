@@ -157,6 +157,7 @@ addCss() {
   done
 
   cp $STYLE_DIR/script.js $WEBSITE_DIR/
+  cp $STYLE_DIR/hideimg.js $WEBSITE_DIR/
   cp $PAGES_DIR/robots.txt $WEBSITE_DIR/
   cp $PAGES_DIR/.htaccess $WEBSITE_DIR/
   cp $PAGES_DIR/projects.html $WEBSITE_DIR/
