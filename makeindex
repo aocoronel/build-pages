@@ -73,7 +73,7 @@ createHeader() {
     echo "description: Under construction" >>"$index_path"
     ;;
   *)
-    echo "description: Welcome to my blog! Here I talk about Tech, Veterinary Medicine and more!" >>"$index_path"
+    echo "description: I'm a **tech enthusiast** and **programming hobbist**. I write about tech, programming, Linux, CLIs, Veterinary Medicine and more!" >>"$index_path"
     ;;
   esac
   echo "---" >>"$index_path"
