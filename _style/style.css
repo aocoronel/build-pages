@@ -30,7 +30,7 @@ blockquote {
   margin-left: 5px;
 }
 blockquote p {
-  color: var(--headercolor-2);
+  color: var(--header-color);
   display: inline-block;
   margin-bottom: 0px;
   margin-top: 0px;

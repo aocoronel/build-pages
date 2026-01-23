@@ -18,6 +18,9 @@ code {
   white-space: pre-wrap;
   color: #d8d2d2;
 }
+a > code {
+  color: var(--green);
+}
 code > span {
   padding-bottom: 0px;
 }
@@ -35,7 +38,6 @@ span.clear {
   clear: left;
   display: block;
 }
-/* Syntax Highlight */
 code {
   white-space: pre-wrap;
 }

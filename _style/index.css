@@ -1,5 +1,4 @@
 @import url("default.css");
-@import url("variables.css");
 @import url("sidebar.css");
 @import url("light-theme.css") screen and (prefers-color-scheme: light);
 @import url("dark-theme.css") screen and (prefers-color-scheme: dark);
@@ -10,13 +9,12 @@
   width: 100%;
 }
 .index-card img {
-  border-radius: 50%;
   height: auto;
   max-width: 135px;
   width: 100%;
 }
 .index-card a {
-  margin-left: auto;
+  align-self: center;
 }
 .index-card > span:first-child {
   flex: 1;
@@ -32,7 +30,7 @@
   }
 }
 .content {
-  max-width: 500px;
+  max-width: 900px;
 }
 .content-upper {
   padding-top: 50px;
@@ -41,8 +39,12 @@
   display: block;
 }
 .content-desc {
-  margin-right: 10px;
-  width: fit-content;
+  max-width: 100%;
+}
+h1 {
+  font-size: 1.75em;
+  margin-top: 5px;
+  color: var(--blue);
 }
 h2 {
   margin-top: 0px;
@@ -52,7 +54,7 @@ h2 {
 }
 hr {
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 .content > ol > li::marker,
 .content > ul > li::marker {
@@ -93,18 +95,9 @@ img {
 a {
   color: var(--green);
 }
-.sidebar {
-  background-color: var(--content_background_color);
-  left: 0;
-  transform: translateX(0%);
-  width: 10%;
-}
-.sidebar h1 {
-  color: var(--accent);
-  border: none;
-}
-.sidebar a {
-  color: var(--link);
+strong,
+b {
+  color: var(--text-color);
 }
 .toggle-btn {
   transform: translateX(1000%);
@@ -118,7 +111,6 @@ blockquote p {
   margin-top: 0px;
   padding-left: 0px;
 }
-/* Mobile */
 @media screen and (max-width: 768px) {
   .sidebar {
     border: 0px solid var(--border-accent);
@@ -143,33 +135,5 @@ blockquote p {
   }
   .table_of_contents {
     float: none;
-  }
-}
-.toggle-img {
-  background-color: var(--sidebar-background);
-  border: 1px solid var(--text-color);
-  border-radius: 40%;
-  color: var(--text-color);
-  cursor: pointer;
-  display: flex;
-  font-size: 30px;
-  height: 35px;
-  justify-content: center;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  max-width: 100%;
-  min-width: 38px;
-  overflow: hidden;
-  padding-top: 0px;
-  padding: 0px;
-  position: fixed;
-  right: 2%;
-  top: 94%;
-  z-index: 9999;
-}
-@media screen and (max-width: 766px) {
-  .toggle-img {
-    right: 5%;
-    top: calc(84% + 4vh);
   }
 }

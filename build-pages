@@ -151,7 +151,7 @@ getTitle() {
 
 addCss() {
   # Minify CSS files
-  cssfiles=("style" "projects" "index" "variables" "further-read" "default" "code" "sidebar" "toc" "posts" "about" "dark-theme" "light-theme")
+  cssfiles=("style" "index" "variables" "further-read" "default" "code" "sidebar" "toc" "posts" "about" "dark-theme" "light-theme")
   for cssfile in "${cssfiles[@]}"; do
     sed -E "s/\/.*//" $STYLE_DIR/"$cssfile".css | sed '/^$/d' | tr -d '\n' >$WEBSITE_DIR/"$cssfile".css
   done
@@ -160,7 +160,6 @@ addCss() {
   cp $STYLE_DIR/hideimg.js $WEBSITE_DIR/
   cp $PAGES_DIR/robots.txt $WEBSITE_DIR/
   cp $PAGES_DIR/.htaccess $WEBSITE_DIR/
-  cp $PAGES_DIR/projects.html $WEBSITE_DIR/
   cp -r $SOURCE_DIR/media $WEBSITE_DIR/
 }
 

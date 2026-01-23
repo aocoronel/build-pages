@@ -6,10 +6,6 @@ list:
 index:
 	bash makeindex
 
-# Make master index
-master-index:
-	bash makeindex -m
-
 # Make about page
 about:
 	bash build-pages "_pages/about.md"
@@ -19,7 +15,7 @@ posts:
   bash build-pages
 
 # Make everything
-all: posts about index master-index
+all: posts about index
 
 # Make feeds
 feed:
