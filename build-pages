@@ -154,8 +154,10 @@ addCss() {
     sed -E "s/\/.*//" $STYLE_DIR/"$cssfile".css | sed '/^$/d' | tr -d '\n' >$WEBSITE_DIR/"$cssfile".css
   done
 
-  cp $PAGES_DIR/robots.txt $WEBSITE_DIR/
   cp $PAGES_DIR/.htaccess $WEBSITE_DIR/
+  cp $PAGES_DIR/404.html $WEBSITE_DIR/
+  cp $PAGES_DIR/LICENSE $WEBSITE_DIR/
+  cp $PAGES_DIR/robots.txt $WEBSITE_DIR/
   cp -r $SOURCE_DIR/media $WEBSITE_DIR/
 }
 
