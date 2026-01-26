@@ -8,8 +8,6 @@ PAGES_DIR=_pages
 main() {
   [ ! -d "$WEBSITE_DIR" ] && mkdir $WEBSITE_DIR
 
-  addCss
-
   parallels=$(getOptimalParallels)
   [ -z "$parallels" ] && parallels=1
 
@@ -156,8 +154,6 @@ addCss() {
     sed -E "s/\/.*//" $STYLE_DIR/"$cssfile".css | sed '/^$/d' | tr -d '\n' >$WEBSITE_DIR/"$cssfile".css
   done
 
-  cp $STYLE_DIR/script.js $WEBSITE_DIR/
-  cp $STYLE_DIR/hideimg.js $WEBSITE_DIR/
   cp $PAGES_DIR/robots.txt $WEBSITE_DIR/
   cp $PAGES_DIR/.htaccess $WEBSITE_DIR/
   cp -r $SOURCE_DIR/media $WEBSITE_DIR/
@@ -168,5 +164,23 @@ if [ $# -eq 0 ]; then
 else
   MD_FILES="$@"
 fi
+
+while getopts ":c" opt; do
+  case "$opt" in
+  c)
+    addCss
+    exit 0
+    ;;
+  -)
+    break
+    ;;
+  ?)
+    echo "Error: Invalid option '-$OPTARG'" >&2
+    exit 1
+    ;;
+  esac
+done
+
+shift $((OPTIND - 1))
 
 main
