@@ -62,7 +62,7 @@ build-pages() {
     stylesheet_path=$dir_depth/index.css
     template="./_templates/template-index.html"
     lazy_load=true
-  elif [ "$markdown_file" = "$PAGES_DIR/about.md" ]; then
+  elif [ "$markdown_file" = "$PAGES_DIR/about.md" ] || [ "$markdown_file" = "$PAGES_DIR/programs.md" ]; then
     stylesheet_path=$dir_depth/about.css
     template="./_templates/template-about.html"
   else

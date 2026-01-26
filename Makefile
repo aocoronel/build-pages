@@ -6,6 +6,7 @@ list:
 	@echo "index -- make index"
 	@echo "list -- lists all recipes"
 	@echo "posts -- make all posts"
+	@echo "programs -- make programs page"
 	@echo "serve -- run server"
 	@echo "sitemap -- generate sitemap"
 
@@ -14,6 +15,9 @@ index:
 
 about:
 	bash build-pages "_pages/about.md"
+
+programs:
+	bash build-pages "_pages/programs.md"
 
 posts:
 	bash build-pages
