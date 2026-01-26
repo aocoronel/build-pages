@@ -34,4 +34,4 @@ feed:
 sitemap:
 	python3 ./scripts/sitemap_gen.py
 
-all: posts about index css feed sitemap
+all: posts about index css feed sitemap programs

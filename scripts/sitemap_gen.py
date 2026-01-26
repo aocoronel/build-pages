@@ -13,6 +13,7 @@ soup = BeautifulSoup(html_content, 'html.parser')
 
 static_pages = [
     {'loc': link, 'lastmod': datetime.now().strftime('%Y-%m-%d')},
+    {'loc': link + '/programs.html', 'lastmod': datetime.now().strftime('%Y-%m-%d')},
     {'loc': link + '/about.html', 'lastmod': datetime.now().strftime('%Y-%m-%d')},
     {'loc': link + '/tech/', 'lastmod': datetime.now().strftime('%Y-%m-%d')},
 ]
