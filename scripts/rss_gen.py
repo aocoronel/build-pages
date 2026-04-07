@@ -34,7 +34,7 @@ if posts_section:
             link_tag = next_node.find('a')
             if link_tag and date_text:
                 title = link_tag.text
-                link = link + link_tag['href']
+                link_ = link + link_tag['href']
 
                 try:
                     naive_datetime = datetime.datetime.strptime(date_text, '%b %d, %Y')
@@ -47,7 +47,7 @@ if posts_section:
 
                 fe = fg.add_entry()
                 fe.title(title)
-                fe.link(href=link)
+                fe.link(href=link_)
                 fe.description(f"{title}")
                 fe.pubDate(pub_date)
         next_node = next_node.find_next_sibling()
