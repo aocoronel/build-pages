@@ -14,9 +14,9 @@ pre {
   width: fit-content;
 }
 code {
-  font-family: var(--monospace-font);
+  background-color: var(--code-background);
   white-space: pre-wrap;
-  color: #d8d2d2;
+  color: var(--grey);
 }
 a > code {
   color: var(--green);
@@ -144,31 +144,37 @@ div.sourceCode {
 code span.in,
 code span.an,
 code span.cv,
-code span.co,
 code span.do {
   color: #9b9db3;
+}
+code span.co {
+  color: #eba0ac;
 }
 code span.dv,
 code span.ex,
 code span.fl {
   color: #ffb378;
 }
+code span.dt {
+  color: #f9e2af;
+}
 code span.cf,
 code span.at,
-code span.dt,
 code span.kw {
-  color: #c991e1;
+  color: #cba6f7;
 }
 code span.fu,
 code span.op {
-  color: #63f2f1;
+  color: #FFFFFF;
 }
-code span.ch,
-code span.sc {
+code span.ch {
   color: #9bddd0;
 }
-code span.pp {
+code span.sc {
   color: #f067fc;
+}
+code span.pp {
+  color: #cba6f7;
 }
 code span.wa {
   color: #eee0b5;
