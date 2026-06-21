@@ -90,6 +90,20 @@ footer {
   font-size: 70%;
   justify-content: space-between;
 }
+details, summary {
+  display: inline;
+  vertical-align: super;
+  font-size: 1rem;
+  color: var(--blue);
+}
+summary {
+  cursor: pointer;
+  list-style: none;
+}
+details[open] span {
+  color: var(--text-color);
+  background-color: var(--code);
+}
 h1 a,
 h2 a,
 h3 a,
